@@ -2,18 +2,18 @@
 
 const { Router } = require('express');
 const router = Router();
-const { obtenerReservas, obtenerReserva, crearReserva, actualizarReserva, eliminarReserva } = require('../controllers/reserva.controllers');
+const { obtenerReservas, obtenerReserva, crearReserva, actualizarReserva, eliminarReserva, renderListaReservas, renderFormNuevaReserva, renderFormEditarReserva } = require('../controllers/reserva.controllers');
 
 // ==========================================
 //         Rutas para renderizar vistas
 // ==========================================
 
 // Obtener todas las reservas
-//router.get('/', renderListaReservas);
+router.get('/', renderListaReservas);
 // Formulario para crear una reserva
-//router.get('/crear-reserva', renderFormNuevaReserva);
+router.get('/crear-reserva', renderFormNuevaReserva);
 // Formulario para actualizar una reserva
-//router.get('/actualizar-reserva/:id', renderFormEditarReserva); // para capturar :id -> req.params.id
+router.get('/actualizar-reserva/:id', renderFormEditarReserva); // para capturar :id -> req.params.id
 
 // ==========================================
 //         Rutas para CRUD de reservas
