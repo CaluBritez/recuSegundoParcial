@@ -12,10 +12,10 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Se conecta la Base de Datos
-
+const { conectar } = require('./database');
+conectar();
 
 // Middlewares
-// TODO: Implementar middlewares
 app.use(cors());
 // app.use(helmet());
 app.use(morgan('dev'));
