@@ -7,8 +7,11 @@ const morgan = require('morgan');
 require('dotenv').config();
 require('ejs');
 
+
 const app = express();
 const port = process.env.PORT || 5000;
+
+// Se conecta la Base de Datos
 
 
 // Middlewares
