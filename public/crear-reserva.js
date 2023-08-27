@@ -23,7 +23,7 @@ formCrearReserva.addEventListener('submit', async (e) => {
         email
     }
 
-    const response = await fetch('http://localhost:3000/api', {
+    const response = await fetch('http://localhost:4000/api', {
         method: 'POST',
         body: JSON.stringify(reserva),
         headers: {

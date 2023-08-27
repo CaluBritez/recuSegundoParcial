@@ -1,21 +1,21 @@
 const formReserva = document.querySelector('#formNuevaReserva');
 const reservaId = formReserva.getAttribute('data-id');
 
-const nombre = document.querySelector('#nombre').value;
-const apellido = document.querySelector('#apellido').value;
-const origen = document.querySelector('#origen').value;
-const destino = document.querySelector('#destino').value;
-const fecha_vuelo = document.querySelector('#fecha_vuelo').value;
-const asiento_numero = document.querySelector('#asiento_numero').value;
-const telefono = document.querySelector('#telefono').value;
-const email = document.querySelector('#email').value;
+const nombre = document.querySelector('#nombre');
+const apellido = document.querySelector('#apellido');
+const origen = document.querySelector('#origen');
+const destino = document.querySelector('#destino');
+const fecha_vuelo = document.querySelector('#fecha_vuelo');
+const asiento_numero = document.querySelector('#asiento_numero');
+const telefono = document.querySelector('#telefono');
+const email = document.querySelector('#email');
 
 document.addEventListener('DOMContentLoaded', async () => {
     // Traemos la reserva que se va a editar
-    const response = await fetch(`http://localhost:3000/api/${reservaId}`
+    const response = await fetch(`http://localhost:4000/api/${reservaId}`
     );
 
-
+console.log(reservaId)
     const data = await response.json();
 
     console.log(data);
@@ -48,7 +48,7 @@ formReserva.addEventListener('submit', async (e) => {
 
 
     // Se envían los nuevos datos al servidor express
-    const response = await fetch(`http://localhost:3000/api/${reservaId}`, {
+    const response = await fetch(`http://localhost:4000/api/${reservaId}`, {
         method: 'PUT',
         body: JSON.stringify(reservaActualizada),
         headers: {

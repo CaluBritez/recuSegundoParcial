@@ -1,6 +1,6 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
-// Nueva instancia de conexión a la Base de Datos
+// Instancia de conexión a la Base de Datos
 const sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,

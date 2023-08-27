@@ -1,6 +1,6 @@
 const obtenerDatos = async () => {
     // Pedir las reservas al servidor
-    const data = await fetch('http://localhost:3000/api', {
+    const data = await fetch('http://localhost:4000/api', {
         method: 'GET'
     });
     const reservas = await data.json();

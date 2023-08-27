@@ -35,3 +35,4 @@ app.use((req, res, next) => {
 
 // Starting the server
 app.listen(port, () => console.log('Server on port: '+port));
+
